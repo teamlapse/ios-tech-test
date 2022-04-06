@@ -1,0 +1,42 @@
+[{
+    "id": 1,
+    "question": "Camels have three sets of eyelashes",
+    "answer": true
+}, {
+    "id": 2,
+    "question": "Nemo is a puffer fish",
+    "answer": false
+}, {
+    "id": 3,
+    "question": "Cows sleep standing up",
+    "answer": true
+}, {
+    "id": 4,
+    "question": "Batman's butler is called Albert",
+    "answer": false
+}, {
+    "id": 5,
+    "question": "Drake was born in Chicago",
+    "answer": false
+}, {
+    "id": 6,
+    "question": "Ashton Kutcher has webbed toes",
+    "answer": true
+}, {
+    "id": 7,
+    "question": "Tyson Fury once purchased two lobsters at a restaurant so he could set them free",
+    "answer": true
+}, {
+    "id": 8,
+    "question": "Only male ducks quack",
+    "answer": false
+}, {
+    "id": 9,
+    "question": "Venezuela is home to the world's highest waterfall",
+    "answer": true
+}, {
+    "id": 10,
+    "question": "In Scotland, the unicorn is their national animal",
+    "answer": true
+}]
+

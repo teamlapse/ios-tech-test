@@ -1,0 +1,51 @@
+[{
+    "id": 1,
+    "question": "What is the longest that an elephant has ever lived?",
+    "options": ["17 Years", "49 Years", "86 Years", "142 Years"],
+    "answer": "86 Years"
+}, {
+    "id": 2,
+    "question": "Which of these animals does NOT appear in the Chinese zodiac?",
+    "options": ["Bear", "Rabbit", "Dragon", "Dog"],
+    "answer": "Bear"
+}, {
+    "id": 3,
+    "question": "In the nursery rhyme, how many blackbirds were baked in a pie?",
+    "options": ["4", "11", "24", "99"],
+    "answer": "24"
+}, {
+    "id": 4,
+    "question": "What is a pomelo?",
+    "options": ["A punching bag", "The largest citrus fruit", "A car brand", "A breed of dog"],
+    "answer": "The largest citrus fruit"
+}, {
+    "id": 5,
+    "question": "What is a group of owls called?",
+    "options": ["An Army", "a Bewilderment", "a Parliament", "a Surprise"],
+    "answer": "a Parliament"
+}, {
+    "id": 6,
+    "question": "Which of these animals uses echolocation to navigate?",
+    "options": ["Dolphins", "Mice", "Pigs", "Naked mole rats"],
+    "answer": "Dolphins"
+}, {
+    "id": 7,
+    "question": "What can a Jesus Christ lizard do?",
+    "options": ["Come back from the dead", "Cause hallucinations if you lick them", "Fly", "Walk on water"],
+    "answer": "Walk on water"
+}, {
+    "id": 8,
+    "question": "Which of the following is NOT a type of antelope?",
+    "options": ["Impala", "Gazelle", "Marten", "Springbok"],
+    "answer": "Marten"
+}, {
+    "id": 9,
+    "question": "In what country would you find the world's northernmost wild monkey population?",
+    "options": ["India", "Japan", "Spain", "USA"],
+    "answer": "Japan"
+}, {
+    "id": 10,
+    "question": "In what mountain range could you encounter a wild yak?",
+    "options": ["Alps", "Andes", "Himalayas", "Rockies"],
+    "answer": "Himalayas"
+}]

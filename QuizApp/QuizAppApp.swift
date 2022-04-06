@@ -6,12 +6,24 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct QuizAppApp: App {
+    let store: Store<QuestionScreenState, QuestionScreenAction> = .init(
+        initialState: .init(),
+        reducer: questionScreenReducer,
+        environment: AppEnvironment(
+            mainQueue: .main,
+            backgroundQueue: DispatchQueue.global().eraseToAnyScheduler()
+        )
+    )
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            QuestionScreenView(
+                store: store
+            )
         }
     }
 }

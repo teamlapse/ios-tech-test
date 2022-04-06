@@ -14,6 +14,17 @@
 		8DBCE5E727FCEB9600F32F21 /* QuizAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCE5E627FCEB9600F32F21 /* QuizAppTests.swift */; };
 		8DBCE5F127FCEB9600F32F21 /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCE5F027FCEB9600F32F21 /* QuizAppUITests.swift */; };
 		8DBCE5F327FCEB9600F32F21 /* QuizAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCE5F227FCEB9600F32F21 /* QuizAppUITestsLaunchTests.swift */; };
+		8DBCE60027FCEBD500F32F21 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCE5FF27FCEBD500F32F21 /* QuestionModel.swift */; };
+		8DBCE60327FCED0700F32F21 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8DBCE60227FCED0700F32F21 /* ComposableArchitecture */; };
+		8DBCE60A27FCEF0F00F32F21 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCE60927FCEF0F00F32F21 /* AppEnvironment.swift */; };
+		8DBCE61D27FCF42900F32F21 /* QuestionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCE61827FCF42900F32F21 /* QuestionScreenView.swift */; };
+		8DBCE61E27FCF42900F32F21 /* QuestionScreenReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCE61A27FCF42900F32F21 /* QuestionScreenReducer.swift */; };
+		8DBCE61F27FCF42900F32F21 /* QuestionScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCE61B27FCF42900F32F21 /* QuestionScreenAction.swift */; };
+		8DBCE62027FCF42900F32F21 /* QuestionScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCE61C27FCF42900F32F21 /* QuestionScreenState.swift */; };
+		8DBCE62227FCF6DA00F32F21 /* multi-choice-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DBCE62127FCF6DA00F32F21 /* multi-choice-questions.json */; };
+		8DBCE62627FCFA5A00F32F21 /* true-false-questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DBCE62527FCFA5A00F32F21 /* true-false-questions.json */; };
+		8DBCE62B27FD017E00F32F21 /* Plakat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DBCE62727FD008E00F32F21 /* Plakat.ttf */; };
+		8DBCE62D27FD022900F32F21 /* Sneak-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8DBCE62C27FD022900F32F21 /* Sneak-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +55,17 @@
 		8DBCE5EC27FCEB9600F32F21 /* QuizAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBCE5F027FCEB9600F32F21 /* QuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITests.swift; sourceTree = "<group>"; };
 		8DBCE5F227FCEB9600F32F21 /* QuizAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DBCE5FF27FCEBD500F32F21 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		8DBCE60927FCEF0F00F32F21 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		8DBCE61827FCF42900F32F21 /* QuestionScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionScreenView.swift; sourceTree = "<group>"; };
+		8DBCE61A27FCF42900F32F21 /* QuestionScreenReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionScreenReducer.swift; sourceTree = "<group>"; };
+		8DBCE61B27FCF42900F32F21 /* QuestionScreenAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionScreenAction.swift; sourceTree = "<group>"; };
+		8DBCE61C27FCF42900F32F21 /* QuestionScreenState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionScreenState.swift; sourceTree = "<group>"; };
+		8DBCE62127FCF6DA00F32F21 /* multi-choice-questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "multi-choice-questions.json"; sourceTree = "<group>"; };
+		8DBCE62527FCFA5A00F32F21 /* true-false-questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "true-false-questions.json"; sourceTree = "<group>"; };
+		8DBCE62727FD008E00F32F21 /* Plakat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Plakat.ttf; sourceTree = "<group>"; };
+		8DBCE62827FD00E500F32F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8DBCE62C27FD022900F32F21 /* Sneak-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sneak-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DBCE60327FCED0700F32F21 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +117,16 @@
 		8DBCE5D427FCEB9500F32F21 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				8DBCE62827FD00E500F32F21 /* Info.plist */,
 				8DBCE5D527FCEB9500F32F21 /* QuizAppApp.swift */,
 				8DBCE5D727FCEB9500F32F21 /* ContentView.swift */,
+				8DBCE5FF27FCEBD500F32F21 /* QuestionModel.swift */,
+				8DBCE60927FCEF0F00F32F21 /* AppEnvironment.swift */,
+				8DBCE62127FCF6DA00F32F21 /* multi-choice-questions.json */,
+				8DBCE62527FCFA5A00F32F21 /* true-false-questions.json */,
+				8DBCE62727FD008E00F32F21 /* Plakat.ttf */,
+				8DBCE62C27FD022900F32F21 /* Sneak-Medium.otf */,
+				8DBCE61727FCF42900F32F21 /* QuestionScreen */,
 				8DBCE5D927FCEB9600F32F21 /* Assets.xcassets */,
 				8DBCE5DB27FCEB9600F32F21 /* Preview Content */,
 			);
@@ -127,6 +158,25 @@
 			path = QuizAppUITests;
 			sourceTree = "<group>";
 		};
+		8DBCE61727FCF42900F32F21 /* QuestionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8DBCE61827FCF42900F32F21 /* QuestionScreenView.swift */,
+				8DBCE61927FCF42900F32F21 /* State */,
+			);
+			path = QuestionScreen;
+			sourceTree = "<group>";
+		};
+		8DBCE61927FCF42900F32F21 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				8DBCE61A27FCF42900F32F21 /* QuestionScreenReducer.swift */,
+				8DBCE61B27FCF42900F32F21 /* QuestionScreenAction.swift */,
+				8DBCE61C27FCF42900F32F21 /* QuestionScreenState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +193,9 @@
 			dependencies = (
 			);
 			name = QuizApp;
+			packageProductDependencies = (
+				8DBCE60227FCED0700F32F21 /* ComposableArchitecture */,
+			);
 			productName = QuizApp;
 			productReference = 8DBCE5D227FCEB9500F32F21 /* QuizApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +268,9 @@
 				Base,
 			);
 			mainGroup = 8DBCE5C927FCEB9500F32F21;
+			packageReferences = (
+				8DBCE60127FCED0700F32F21 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 8DBCE5D327FCEB9500F32F21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,7 +288,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBCE5DD27FCEB9600F32F21 /* Preview Assets.xcassets in Resources */,
+				8DBCE62627FCFA5A00F32F21 /* true-false-questions.json in Resources */,
+				8DBCE62227FCF6DA00F32F21 /* multi-choice-questions.json in Resources */,
 				8DBCE5DA27FCEB9600F32F21 /* Assets.xcassets in Resources */,
+				8DBCE62B27FD017E00F32F21 /* Plakat.ttf in Resources */,
+				8DBCE62D27FD022900F32F21 /* Sneak-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DBCE62027FCF42900F32F21 /* QuestionScreenState.swift in Sources */,
+				8DBCE60A27FCEF0F00F32F21 /* AppEnvironment.swift in Sources */,
+				8DBCE60027FCEBD500F32F21 /* QuestionModel.swift in Sources */,
+				8DBCE61F27FCF42900F32F21 /* QuestionScreenAction.swift in Sources */,
 				8DBCE5D827FCEB9500F32F21 /* ContentView.swift in Sources */,
+				8DBCE61D27FCF42900F32F21 /* QuestionScreenView.swift in Sources */,
 				8DBCE5D627FCEB9500F32F21 /* QuizAppApp.swift in Sources */,
+				8DBCE61E27FCF42900F32F21 /* QuestionScreenReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +488,7 @@
 				DEVELOPMENT_TEAM = 72MWNL29YV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuizApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -451,6 +518,7 @@
 				DEVELOPMENT_TEAM = 72MWNL29YV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuizApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -585,6 +653,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8DBCE60127FCED0700F32F21 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8DBCE60227FCED0700F32F21 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DBCE60127FCED0700F32F21 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8DBCE5CA27FCEB9500F32F21 /* Project object */;
 }
