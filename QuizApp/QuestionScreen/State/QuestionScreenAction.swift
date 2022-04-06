@@ -8,4 +8,5 @@ enum QuestionScreenAction: Equatable {
     case didAnswer(Bool)
     
     case replay
+    case back
 }

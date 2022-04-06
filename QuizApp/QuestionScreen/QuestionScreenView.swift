@@ -46,7 +46,7 @@ struct QuestionScreenView: View {
                     switch viewStore.screenState {
                     case .question(let question):
                         VStack(spacing: 22) {
-                            Text("Score: \(viewStore.correctQuestions.count)/\(viewStore.totalCount)")
+                            Text("Score: \(viewStore.score)/\(viewStore.totalCount)")
                                 .font(.custom("Sneak-Medium", size: 20))
                             Text(question.question)
                                 .font(.custom("Plakat", size: 30))
@@ -55,6 +55,12 @@ struct QuestionScreenView: View {
                         .padding(.horizontal)
                         
                         Spacer()
+                        
+                        QuizButton(text: "Back", borderColor: .red)
+                            .onTapGesture {
+                                viewStore.send(.back)
+                            }
+                            .padding(.bottom, 10)
                         
                         HStack {
                             QuizButton(text: "TRUE", borderColor: question.answer ? .green : .blue)

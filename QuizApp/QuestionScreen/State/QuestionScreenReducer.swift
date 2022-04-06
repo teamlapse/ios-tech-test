@@ -50,6 +50,17 @@ let questionScreenReducer = Reducer<QuestionScreenState, QuestionScreenAction, A
         }
         state.correctQuestions.removeAll()
         state.failedQuestion = nil
+        
+    case .back:
+        if let last = state.correctQuestions.last {
+            state.correctQuestions.remove(id: last.id)
+            state.questions.insert(last, at: 0)
+        }
+        if let last = state.correctQuestions.last {
+            state.correctQuestions.remove(id: last.id)
+            state.questions.insert(last, at: 0)
+        }
+        state.score -= 1
     }
     return .none
 }
