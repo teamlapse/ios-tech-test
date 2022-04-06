@@ -55,5 +55,75 @@ class QuizAppTests: XCTestCase {
             $0.hasLoadedQuestions = true
         }
     }
+    
+    func testSetQuestions() throws {
+        let environment: AppEnvironment = .failing
+        let state = QuestionScreenState()
+        
+        let store = TestStore(
+            initialState: state,
+            reducer: questionScreenReducer,
+            environment: environment
+        )
+        
+        store.send(.setQuestions(QuizAppTests.testQuestions)) {
+            $0.questions = .init(uniqueElements: QuizAppTests.testQuestions)
+            $0.hasLoadedQuestions = true
+        }
+    }
 
+    func testDidAnswerCorrect() throws {
+        let environment: AppEnvironment = .failing
+        var state = QuestionScreenState()
+        state.hasLoadedQuestions = true
+        state.questions = .init(uniqueElements: QuizAppTests.testQuestions)
+        
+        let store = TestStore(
+            initialState: state,
+            reducer: questionScreenReducer,
+            environment: environment
+        )
+        
+        store.send(.didAnswer(true)) {
+            $0.correctQuestions.append(QuizAppTests.testQuestions.first!)
+            $0.questions.remove(id: QuizAppTests.testQuestions.first!.id)
+        }
+    }
+    
+    func testDidAnswerIncorrect() throws {
+        let environment: AppEnvironment = .failing
+        var state = QuestionScreenState()
+        state.hasLoadedQuestions = true
+        state.questions = .init(uniqueElements: QuizAppTests.testQuestions)
+        
+        let store = TestStore(
+            initialState: state,
+            reducer: questionScreenReducer,
+            environment: environment
+        )
+        
+        store.send(.didAnswer(false)) {
+            $0.failedQuestion = $0.currentQuestion
+        }
+    }
+    
+    func testReplay() throws {
+        let environment: AppEnvironment = .failing
+        var state = QuestionScreenState()
+        state.hasLoadedQuestions = true
+        state.questions = .init(uniqueElements: [QuizAppTests.testQuestions.last!])
+        state.correctQuestions = .init(uniqueElements: [QuizAppTests.testQuestions.first!])
+        
+        let store = TestStore(
+            initialState: state,
+            reducer: questionScreenReducer,
+            environment: environment
+        )
+        
+        store.send(.replay) {
+            $0.questions = .init(uniqueElements: QuizAppTests.testQuestions)
+            $0.correctQuestions = .init(uniqueElements: [])
+            $0.failedQuestion = nil
+        }
+    }
 }
