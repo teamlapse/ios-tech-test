@@ -34,12 +34,17 @@ let questionScreenReducer = Reducer<QuestionScreenState, QuestionScreenAction, A
            answer == question.answer {
             state.correctQuestions.append(question)
             state.questions.removeFirst()
+            state.score += 1
         } else {
             // SHOW FAILURE SCREEN WITH RESULTS
             state.failedQuestion = state.currentQuestion
+            if state.score == 3 {
+                state.score = 2
+            }
         }
         
     case .replay:
+        state.score = 0
         for question in state.correctQuestions {
             state.questions.insert(question, at: 0)
         }

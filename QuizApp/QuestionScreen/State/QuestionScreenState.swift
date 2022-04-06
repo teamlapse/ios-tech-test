@@ -15,9 +15,11 @@ struct QuestionScreenState: Equatable {
         return questions.count + correctQuestions.count
     }
     
+    var score: Int = 0
+    
     var screenState: State {
         if failedQuestion != nil {
-            return .failed(score: correctQuestions.count)
+            return .failed(score: score)
         } else if let currentQuestion = currentQuestion {
             return .question(currentQuestion)
         } else {

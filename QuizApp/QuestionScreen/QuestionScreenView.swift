@@ -3,6 +3,7 @@ import SwiftUI
 
 struct QuizButton: View {
     let text: String
+    var borderColor: Color = Color(red: 39/255, green: 82/255, blue: 255/255)
 
     var body: some View {
         ZStack {
@@ -14,7 +15,7 @@ struct QuizButton: View {
                 .padding(.top, 5)
         }
         .frame(width: 160, height: 50)
-        .border(Color(red: 39/255, green: 82/255, blue: 255/255), width: 5)
+        .border(borderColor, width: 5)
         .contentShape(Rectangle())
     }
 }
@@ -56,12 +57,12 @@ struct QuestionScreenView: View {
                         Spacer()
                         
                         HStack {
-                            QuizButton(text: "TRUE")
+                            QuizButton(text: "TRUE", borderColor: question.answer ? .green : .blue)
                                 .onTapGesture {
                                     viewStore.send(.didAnswer(true))
                                 }
     
-                            QuizButton(text: "FALSE")
+                            QuizButton(text: "FALSE", borderColor: !question.answer ? .green : .blue)
                                 .onTapGesture {
                                     viewStore.send(.didAnswer(false))
                                 }
