@@ -91,7 +91,11 @@ struct QuestionScreenView: View {
             .background(background)
             .onChange(of: scenePhase) { phase in
                 guard phase == .active else { return }
-                viewStore.send(.didBecomeActive)
+                if viewStore.hasLoadedQuestions {
+                    viewStore.send(.replay)
+                } else {
+                    viewStore.send(.didBecomeActive)
+                }
             }
         }
         
