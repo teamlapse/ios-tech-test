@@ -34,6 +34,10 @@ struct QuestionScreenView: View {
                 background
                 VStack {
                     Image("QuizpediaLogo", bundle: .main)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            fatalError()
+                        }
                     Spacer()
                 }
                 VStack {
