@@ -1,6 +1,6 @@
 import Foundation
 
-enum QuestionScreenAction: Equatable {
+public enum QuestionScreenAction: Equatable {
     case didBecomeActive
     
     case setQuestions([QuestionModel])

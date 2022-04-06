@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct QuestionModel: Identifiable, Equatable, Codable {
-    let id: Int
-    let question: String
-    let answer: Bool
+public struct QuestionModel: Identifiable, Equatable, Codable {
+    public let id: Int
+    public let question: String
+    public let answer: Bool
 }

@@ -9,6 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 struct AppEnvironment {
-    let mainQueue: AnySchedulerOf<DispatchQueue>
-    let backgroundQueue: AnySchedulerOf<DispatchQueue>
+    var mainQueue: AnySchedulerOf<DispatchQueue>
+    var backgroundQueue: AnySchedulerOf<DispatchQueue>
+    var fetchQuestions: () -> Effect<QuestionScreenAction, Never>
 }

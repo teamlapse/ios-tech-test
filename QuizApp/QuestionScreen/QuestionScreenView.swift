@@ -118,7 +118,10 @@ struct QuestionScreenView_Previews: PreviewProvider {
                 reducer: questionScreenReducer,
                 environment: AppEnvironment(
                     mainQueue: .immediate,
-                    backgroundQueue: .immediate
+                    backgroundQueue: .immediate,
+                    fetchQuestions: {
+                        return .none
+                    }
                 )
             )
         )

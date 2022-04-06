@@ -1,21 +1,21 @@
 import Foundation
 import ComposableArchitecture
 
-struct QuestionScreenState: Equatable {
-    var hasLoadedQuestions: Bool = false
-    var questions: IdentifiedArrayOf<QuestionModel> = []
-    var correctQuestions: IdentifiedArrayOf<QuestionModel> = []
-    var failedQuestion: QuestionModel?
+public struct QuestionScreenState: Equatable {
+    public var hasLoadedQuestions: Bool = false
+    public var questions: IdentifiedArrayOf<QuestionModel> = []
+    public var correctQuestions: IdentifiedArrayOf<QuestionModel> = []
+    public var failedQuestion: QuestionModel?
     
-    var currentQuestion: QuestionModel? {
+    public var currentQuestion: QuestionModel? {
         return questions.first
     }
     
-    var totalCount: Int {
+    public var totalCount: Int {
         return questions.count + correctQuestions.count
     }
     
-    var screenState: State {
+    public var screenState: State {
         if failedQuestion != nil {
             return .failed(score: correctQuestions.count)
         } else if let currentQuestion = currentQuestion {
@@ -25,7 +25,7 @@ struct QuestionScreenState: Equatable {
         }
     }
     
-    enum State: Equatable {
+    public enum State: Equatable {
         case question(QuestionModel)
         case failed(score: Int)
         case success

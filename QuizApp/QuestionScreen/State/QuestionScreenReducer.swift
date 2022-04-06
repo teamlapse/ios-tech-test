@@ -5,26 +5,11 @@ let questionScreenReducer = Reducer<QuestionScreenState, QuestionScreenAction, A
     switch action {
     case .didBecomeActive:
         // LOAD QUESTIONS FROM API
-        guard !state.hasLoadedQuestions,
-              let filePath = Bundle.main.path(forResource: "true-false-questions", ofType: "json") else {
-                  break
-              }
+        guard !state.hasLoadedQuestions else {
+            break
+        }
         
-        return Just(filePath)
-            .subscribe(on: environment.backgroundQueue)
-            .compactMap { filePath -> [QuestionModel]? in
-                do {
-                    let data = try Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe)
-                    let questions = try JSONDecoder().decode([QuestionModel].self, from: data)
-                    return questions
-                } catch {
-                    print(error)
-                    return nil
-                }
-            }
-            .map(QuestionScreenAction.setQuestions)
-            .receive(on: environment.mainQueue)
-            .eraseToEffect()
+        return environment.fetchQuestions()
     case .setQuestions(let models):
         state.hasLoadedQuestions = true
         state.questions = .init(uniqueElements: models)
